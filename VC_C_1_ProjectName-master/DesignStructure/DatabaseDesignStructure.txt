@@ -1,0 +1,44 @@
+
+
+Table(dataType dataPoint1, dataType dataPoint2, ...)
+
+
+/////////////////////////////////////////////////////////////// SERVER DATABASE ////////////////////////////////////////////////////////////////
+
+Users(varchar[50] Username, varchar[50] Email, varchar[512] Password_, int UserID auto_increment, primary key(UserID))
+
+Activity(varchar[50] ActivityName, int ActivityID auto_increment, primary key(ActivityID))
+
+<ActivityID>_DataTypes(varchar[50] DataType, varchar[50] Name)//contains the datatypes for a list of attributes for activity ActivityName
+
+<UserID>_Activity(varchar[50] ActivityName, int ActivityID, primary key(ActivityID))
+
+//<UserID>_<ActivityName>_Dashboard(varchar[50] ModuleName, int Position)
+Activity_Dashboard(varchar[50] UserID, varchar[50] ActivityName, varchar[2048] Layout)
+
+<UserID>_<ActivityName>_RawData(depends on Activity type)
+
+Leagues(varchar[50] ActivityName, varchar[50] OwnerUserID, varchar[50] LeagueName)
+
+<LeagueName>_Admins(varchar[50] UserID)
+
+<LeagueName>_Members(varchar[50] UserID)
+
+<Username>_<LeagueName>_Dashboard(varchar[50] ModuleName, int Position)
+
+<UserID>_<ActivityName>_CalcData(varchar[255] dpName, varchar[255] equation)
+
+<UserID>_<LeagueName>_Dashboard (where <UserID> exists in Users and <LeagueName> exists in Leagues)
+Fields depend on the ActivityName corresponding to LeagueName in Leagues
+
+
+
+/////////////////////////////////////////////////////////////// CLIENT DATABASE ////////////////////////////////////////////////////////////////
+
+
+Layouts(text LayoutTitle, text LayoutData)
+
+<ActivityName>_CalculateData(text DataPointName, text DataExpression)
+
+
+

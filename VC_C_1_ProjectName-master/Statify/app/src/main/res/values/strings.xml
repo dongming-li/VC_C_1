@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Statify</string>
+    <string name="title_solo">Solo</string>
+    <string name="title_leagues">Leagues</string>
+    <string name="title_newsfeed">Newsfeed</string>
+    <string name="title_friends">Friends</string>
+    <string name="title_settings">Settings</string>
+    <string name="title_activity_leagues">LeaguesActivity</string>
+    <string name="title_activity_newsfeed">NewsfeedActivity</string>
+    <string name="title_activity_friends">FriendsActivity</string>
+    <string name="plus_sign">+</string>
+    <string name="bowling">Bowling</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="emailVerify">Verify Email</string>
+    <string name="repeat_password">Repeat Password</string>
+    <string name="empty_string"></string>
+    <string-array name="dashboard_module_settings_active">
+        <item>Change</item>
+        <item>Remove</item>
+        <item>Upload</item>
+
+    </string-array>
+    <string-array name="dashboard_module_selection">
+        <item>Raw Data</item>
+        <item>Calculated Data</item>
+        <item>Graph</item>
+    </string-array>
+
+
+    <string-array name="addOr">
+        <item>Add Layout</item>
+        <item>Download Layout</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

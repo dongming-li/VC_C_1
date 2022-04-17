@@ -1,0 +1,19 @@
+"<main command> <data (this field partitions further depending on command)>"
+	
+	"add <subcommand> <Username> <data (this field partitions further depending on subcommand)>"
+	
+		"add activity <Username> <ActivityName>"
+
+		"add module <Username> <ActivityName> <Position> <ModuleName>"
+
+		"add data <Username> <ActivityName> <data>"
+
+		
+	"pull <TableName>"
+	
+	
+	"remove subcommand <Username> <data (this field partitions further depending on subcommand)>"
+
+		"remove activity <Username> <ActivityName>"
+
+		"remove module <Username> <ActivityName> <Position>"
